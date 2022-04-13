@@ -1,10 +1,9 @@
-const mongoose = require('../connection');
+const mongoose = require('../db/connection');
 const Schema = mongoose.Schema;
 
 const QuestionsSchema = new Schema({
 	subject: String,
 	body: String,
-	response: String,
 });
 
 const Question = mongoose.model('Question', QuestionsSchema);
