@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const cors = require('cors');
 
+app.set('port', process.env.PORT || 4000);
 app.get('/', (req, res) => {
 	res.redirect('/home');
 });
@@ -16,6 +17,6 @@ app.use('/questions', questionController);
 const sessionController = require('./controllers/Session');
 app.use('/sessions', sessionController);
 
-app.listen(4000, () => {
-	console.log('app listening on port 4000');
+app.listen(app.get('port'), () => {
+	console.log(`PORT: ${app.get('port')}`);
 });
