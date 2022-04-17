@@ -5,8 +5,8 @@ const SessionSchema = new Schema({
 	sessionId: { type: Number, require: true },
 	sessionName: { type: String, require: true },
 	numQuestions: { type: Number, require: true },
-	questions: [String],
-	responses: [String],
+	questions: [{ type: String }],
+	responses: [{ type: String }],
 });
 
 const Session = mongoose.model('Session', SessionSchema);
