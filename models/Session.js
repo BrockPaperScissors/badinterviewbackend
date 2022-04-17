@@ -5,7 +5,12 @@ const SessionSchema = new Schema({
 	sessionId: { type: Number, require: true },
 	sessionName: { type: String, require: true },
 	numQuestions: { type: Number, require: true },
-	questions: [Object],
+	questions: [
+		{
+			subject: String,
+			body: String,
+		},
+	],
 	responses: [String],
 });
 

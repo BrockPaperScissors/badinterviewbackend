@@ -4,7 +4,7 @@ const Session = require('../models/Session');
 
 router.post('/', (req, res) => {
 	const newSession = req.body;
-	console.log(newSession);
+	console.log('logging newsession', newSession);
 	Session.create(newSession).then((session) => {
 		console.log('logging session', session);
 		res.json(session);
