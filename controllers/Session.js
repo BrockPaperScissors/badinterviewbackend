@@ -3,11 +3,8 @@ const router = express.Router();
 const Session = require('../models/Session');
 
 router.post('/', (req, res) => {
-	// const newSession = JSON.stringify(req.body);
-	console.log('logging newsession');
 	Session.create(req.body).then((session) => {
 		console.log('logging session', session);
-		// console.log('post sent');
 		res.json(session);
 	});
 });
