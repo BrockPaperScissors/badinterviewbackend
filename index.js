@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 
 app.set('port', process.env.PORT || 4000);
 app.get('/', (req, res) => {
-	res.redirect('/home');
+	res.redirect('/questions');
 });
 
 // app.use(express.json());
